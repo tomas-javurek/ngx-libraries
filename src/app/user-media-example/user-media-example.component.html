@@ -1,0 +1,33 @@
+<lib-user-media
+  #userMedia
+  [constraints]="constraints"
+  [useCanvas]="false"
+  [nativeMediaControls]="false"
+  (componentInitialised)="log('componentInitialised', $event)"
+  (deviceInitialised)="log('deviceInitialised', $event)"
+  (error)="log('ERROR', $event)"
+  (autoplayed)="log('autoplayed', $event)"
+  (stateChanged)="log('stateChanged', $event)"
+  (mediaStream)="log('mediaStream', $event)"
+  (devices)="log('devices', $event)"
+  (supportedConstraints)="log('supportedConstraints', $event)"
+  (canvasFrame)="processCanvasFrame($event)"
+></lib-user-media>
+
+<lib-user-media
+  #userMedia2
+  [constraints]="constraints2"
+  [useCanvas]="false"
+  [nativeMediaControls]="false"
+  (componentInitialised)="log('componentInitialised', $event)"
+  (deviceInitialised)="log('deviceInitialised', $event)"
+  (error)="log('ERROR', $event)"
+  (autoplayed)="log('autoplayed', $event)"
+  (stateChanged)="log('stateChanged', $event)"
+  (mediaStream)="log('mediaStream', $event)"
+  (devices)="log('devices', $event)"
+  (supportedConstraints)="log('supportedConstraints', $event)"
+  (canvasFrame)="processCanvasFrame($event)"
+></lib-user-media>
+
+<button (click)="switchCameras()">SWITCH CAMERA (change constraints)</button>
